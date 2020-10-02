@@ -1,9 +1,8 @@
 from PIL import Image
 from simpleai.search import SearchProblem, astar
-from modules.brute_force_mazeSolver import runSolver
-from modules.a_star_mazeSolver import MazeSolver
-from modules.mazeGenerator import generator
-from modules.mazeToGif import makeGIF
+from .modules.brute_force_mazeSolver import runSolver #pylint: disable=relative-beyond-top-level
+from .modules.a_star_mazeSolver import MazeSolver #pylint: disable=relative-beyond-top-level
+from .modules.mazeToGif import makeGIF #pylint: disable=relative-beyond-top-level
 
 
 def get_start_end(mazeMatrix:list):
@@ -111,10 +110,10 @@ def a_star(mazeMatrix:list):
                 save_all=True, append_images=images[1:],
                 optimize=False, duration=0.5, loop=0)
 
-def main():
-    maze = generator(30,10)
-    a_star(maze)
-    print("Done A*")
-    brute_force(maze)
-    print("DONE Brute_Force")
-main()
+# def main():
+#     maze = generator(30,10)
+#     a_star(maze)
+#     print("Done A*")
+#     brute_force(maze)
+#     print("DONE Brute_Force")
+# main()
