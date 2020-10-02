@@ -25,7 +25,7 @@ def get_start_end(mazeMatrix:list):
 
 def brute_force(mazeMatrix:list):
     start,end = get_start_end(mazeMatrix)
-    runSolver(mazeMatrix,start,end,"maze.gif")
+    runSolver(mazeMatrix,start,end,"./static/brute.gif")
 
 def mazeMatrix_for_astar(mazeMatrix:list):
     start,end = get_start_end(mazeMatrix)
@@ -46,9 +46,8 @@ def mazeMatrix_for_astar(mazeMatrix:list):
     return mazeConverted
 
 def a_star(mazeMatrix:list):
-
     images = []
-    fileNameGif = "maze2.gif"
+    fileNameGif = "./static/a.gif"
     MAP = mazeMatrix_for_astar(mazeMatrix)
     cost_regular = 1.0
 
