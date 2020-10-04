@@ -15,9 +15,9 @@ def run_server():
         print(e)
         exit()
 def gitUpdate(dt_string):
-    system('git init')
+    # system('git init')
     system('git add *')
     system('git commit -m '+'"'+dt_string+'"')
-    system("git remote add origin https://github.com/Eric106/Intelligent_Systems.git")
+    # system("git remote add origin https://github.com/Eric106/Intelligent_Systems.git")
     system('git push origin master')
 run_server()
