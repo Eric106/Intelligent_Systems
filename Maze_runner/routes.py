@@ -5,9 +5,10 @@ from utils.modules.mazeGenerator import generator
 
 app = Flask(__name__)
 system("del /s/q/f .\static\mazeImg")
-mazeX , mazeY = 30, 20
-gifPaths = {"astar":a_star(generator(mazeX , mazeY)),
-            "brute":brute_force(generator(mazeX , mazeY))}
+mazeX , mazeY = 30, 16
+maze = generator(mazeX , mazeY)
+gifPaths = {"astar":a_star(maze),
+            "brute":brute_force(maze)}
 
 @app.route('/')
 def home():
