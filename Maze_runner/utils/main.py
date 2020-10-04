@@ -1,3 +1,4 @@
+from time import time
 from datetime import datetime
 from PIL import Image
 from simpleai.search import SearchProblem, astar
@@ -36,8 +37,11 @@ def get_file_name(nameSearch:str):
 def brute_force(mazeMatrix:list):
     start,end = get_start_end(mazeMatrix)
     fileName = get_file_name("brute")
+    timeStart = time()
     runSolver(mazeMatrix,start,end,fileName)
-    return fileName
+    timeEnd = time()
+    timeElap = round((timeEnd - timeStart),4)
+    return fileName, timeElap
 
 def mazeMatrix_for_astar(mazeMatrix:list):
     start,end = get_start_end(mazeMatrix)
@@ -72,11 +76,13 @@ def a_star(mazeMatrix:list):
     }
 
     # Create maze solver object
+    timeStart = time()
     problem = MazeSolver(MAP,COSTS)
 
     # Run the solver
     result = astar(problem, graph_search=True)
-
+    timeEnd = time()
+    timeElap = round((timeEnd - timeStart),4)
     # Extract the path
     path = [x[1] for x in result.path()]
 
@@ -120,7 +126,7 @@ def a_star(mazeMatrix:list):
     images[0].save(fileName,
                 save_all=True, append_images=images[1:],
                 optimize=False, duration=0.5, loop=0)
-    return fileName
+    return fileName, timeElap
 
 # def main():
 #     maze = generator(30,10)

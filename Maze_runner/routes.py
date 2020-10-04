@@ -6,9 +6,9 @@ from utils.modules.mazeGenerator import generator
 app = Flask(__name__)
 system("del /s/q/f .\static\mazeImg")
 mazeX , mazeY = 30, 16
-maze = generator(mazeX , mazeY)
-gifPaths = {"astar":a_star(maze),
-            "brute":brute_force(maze)}
+init_Maze = generator(mazeX , mazeY)
+gifPaths = {"astar":a_star(init_Maze),
+            "brute":brute_force(init_Maze)}
 
 @app.route('/')
 def home():
@@ -16,18 +16,20 @@ def home():
 
 @app.route('/A')   
 def A_Search():
-    fileName = gifPaths["astar"]
-    return render_template('a.html',fileName=fileName)
+    fileName = gifPaths["astar"][0]
+    elapTime = gifPaths["astar"][1]
+    return render_template('a.html',fileName=fileName,time=elapTime)
 
 @app.route('/Brute')
 def Brute():
-    fileName = gifPaths["brute"]
-    return render_template('brute.html',fileName=fileName)
+    fileName = gifPaths["brute"][0]
+    elapTime = gifPaths["brute"][1]
+    return render_template('brute.html',fileName=fileName,time=elapTime)
 
 @app.route('/mazeGenerator/<toRedirect>')
 def mazeGenerator(toRedirect):
     maze = generator(mazeX , mazeY)
-    gifPaths["astar"]  = a_star(maze)
+    gifPaths["astar"] = a_star(maze)
     gifPaths["brute"] = brute_force(maze)
     if toRedirect == "A":
         return redirect(url_for('A_Search'))
