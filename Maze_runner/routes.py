@@ -1,8 +1,13 @@
-from flask import Flask, render_template
+from os import system
+from flask import Flask, render_template, redirect, url_for
 from utils.main import a_star, brute_force
 from utils.modules.mazeGenerator import generator
 
 app = Flask(__name__)
+system("del /s/q/f .\static\mazeImg")
+mazeX , mazeY = 30, 20
+gifPaths = {"astar":a_star(generator(mazeX , mazeY)),
+            "brute":brute_force(generator(mazeX , mazeY))}
 
 @app.route('/')
 def home():
@@ -10,13 +15,23 @@ def home():
 
 @app.route('/A')   
 def A_Search():
-    a_star(generator(30, 20))
-    return render_template('a.html')
+    fileName = gifPaths["astar"]
+    return render_template('a.html',fileName=fileName)
 
 @app.route('/Brute')
 def Brute():
-    brute_force(generator(30, 20))
-    return render_template('brute.html')
+    fileName = gifPaths["brute"]
+    return render_template('brute.html',fileName=fileName)
+
+@app.route('/mazeGenerator/<toRedirect>')
+def mazeGenerator(toRedirect):
+    maze = generator(mazeX , mazeY)
+    gifPaths["astar"]  = a_star(maze)
+    gifPaths["brute"] = brute_force(maze)
+    if toRedirect == "A":
+        return redirect(url_for('A_Search'))
+    elif toRedirect == "Brute":
+        return redirect(url_for('Brute'))
 
 @app.route('/Video')
 def Video():

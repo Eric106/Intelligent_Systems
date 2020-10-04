@@ -1,3 +1,4 @@
+from datetime import datetime
 from PIL import Image
 from simpleai.search import SearchProblem, astar
 from .modules.brute_force_mazeSolver import runSolver #pylint: disable=relative-beyond-top-level
@@ -21,11 +22,22 @@ def get_start_end(mazeMatrix:list):
         end = e1 if mazeMatrix[e1[0]][e1[1]] != 1 else e2 \
             if mazeMatrix[e2[0]][e2[1]] != 1 else e3
     return start, end
-    
+
+def get_file_name(nameSearch:str):
+    now = "_".join(str(datetime.now()).split(" "))
+    now = ".".join(now.split(":"))
+    file_name = None
+    if nameSearch == "brute":
+        file_name = "./static/mazeImg/"+"brute_"+now+".gif"
+    else:
+        file_name = "./static/mazeImg/"+"astar_"+now+".gif"
+    return file_name   
 
 def brute_force(mazeMatrix:list):
     start,end = get_start_end(mazeMatrix)
-    runSolver(mazeMatrix,start,end,"./static/brute.gif")
+    fileName = get_file_name("brute")
+    runSolver(mazeMatrix,start,end,fileName)
+    return fileName
 
 def mazeMatrix_for_astar(mazeMatrix:list):
     start,end = get_start_end(mazeMatrix)
@@ -47,7 +59,7 @@ def mazeMatrix_for_astar(mazeMatrix:list):
 
 def a_star(mazeMatrix:list):
     images = []
-    fileNameGif = "./static/a.gif"
+    fileName = get_file_name("astar")
     MAP = mazeMatrix_for_astar(mazeMatrix)
     cost_regular = 1.0
 
@@ -105,9 +117,10 @@ def a_star(mazeMatrix:list):
             images = makeGIF(start,end,maze,mazeWithSteps,path,images)
         else:
             images = makeGIF(start,end,maze,mazeWithSteps,[],images)
-    images[0].save(fileNameGif,
+    images[0].save(fileName,
                 save_all=True, append_images=images[1:],
                 optimize=False, duration=0.5, loop=0)
+    return fileName
 
 # def main():
 #     maze = generator(30,10)
