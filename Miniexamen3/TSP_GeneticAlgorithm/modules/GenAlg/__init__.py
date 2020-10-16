@@ -18,12 +18,13 @@ def solve_TSP(distanceMatrix,latLongDict):
     # distances_df = pd.read_csv(fileNameCSV, index_col=0)
     distances_df = distanceMatrix
     print(distances_df)
-    pop_number = 80
+    # pop_number = 20
+    pop_number = 20
     size_of_genotype = len(distances_df.columns)
     p = pop.Population(pop_number, size_of_genotype, get_tot_dist) 
     
-
-    max_gen = 3200 
+    # max_gen = 3200
+    max_gen = 14400 
     i=0
     while i < max_gen:
         if i % 50 == 0 :

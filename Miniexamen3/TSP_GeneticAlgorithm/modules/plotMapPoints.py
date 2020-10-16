@@ -10,9 +10,12 @@ def get_mex_map():
 def set_locations_mex(locationsDict,htmlFileName):
     mexMap = get_mex_map()
     for key in locationsDict.keys():
-        if list(locationsDict.keys())[0] == key or list(locationsDict.keys())[-1] == key:
+        if list(locationsDict.keys())[0] == key:
             Marker(locationsDict[key],popup='<b>'+key.split('=> ')[1]+'</b>',
             tooltip=key, icon=Icon(color='green')).add_to(mexMap)
+        elif list(locationsDict.keys())[-1] == key:
+            Marker(locationsDict[key],popup='<b>'+key.split('=> ')[1]+'</b>',
+            tooltip=key, icon=Icon(color='red')).add_to(mexMap)
         else:
             Marker(locationsDict[key], popup='<b>'+key.split('=> ')[1]+'</b>',
                    tooltip=key).add_to(mexMap)
