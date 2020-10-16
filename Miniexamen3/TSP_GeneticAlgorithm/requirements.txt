@@ -1,2 +1,4 @@
 matplotlib
-geneticalgorithm
+geopy
+flask
+numpy
