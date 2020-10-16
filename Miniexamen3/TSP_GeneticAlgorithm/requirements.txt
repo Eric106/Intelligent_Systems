@@ -1,4 +1,5 @@
 matplotlib
+folium
 geopy
 flask
 numpy
