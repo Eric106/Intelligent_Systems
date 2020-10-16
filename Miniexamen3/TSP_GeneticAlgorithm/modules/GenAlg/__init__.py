@@ -13,9 +13,11 @@ def get_tot_dist(order_of_cities_visited):
     arbitrary_big_negative = -10000
     return arbitrary_big_negative + tot_dist
 
-def solve_TSP(fileNameCSV):
+def solve_TSP(distanceMatrix):
     global distances_df
-    distances_df = pd.read_csv(fileNameCSV, index_col=0)
+    # distances_df = pd.read_csv(fileNameCSV, index_col=0)
+    distances_df = distanceMatrix
+    print(distances_df)
     pop_number = 20
     size_of_genotype = len(distances_df.columns)
     p = pop.Population(pop_number, size_of_genotype, get_tot_dist) 
