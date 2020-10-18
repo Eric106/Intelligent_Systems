@@ -2,7 +2,6 @@ from . import population as pop
 import numpy as np
 import pandas as pd
 
-
 # define custom fitness function:
 def get_tot_dist(order_of_cities_visited):
     tot_dist = 0
@@ -13,27 +12,30 @@ def get_tot_dist(order_of_cities_visited):
     arbitrary_big_negative = -10000
     return arbitrary_big_negative + tot_dist
 
-def solve_TSP(distanceMatrix,latLongDict):
+def solve_TSP(distanceMatrix,latLongDict,pop_number, max_gen):
     global distances_df
     # distances_df = pd.read_csv(fileNameCSV, index_col=0)
     distances_df = distanceMatrix
     print(distances_df)
     # pop_number = 20
-    pop_number = 20
+    # pop_number = 80
     size_of_genotype = len(distances_df.columns)
     p = pop.Population(pop_number, size_of_genotype, get_tot_dist) 
-    
     # max_gen = 3200
-    max_gen = 14400 
+    # max_gen = 51200
     i=0
     while i < max_gen:
-        if i % 50 == 0 :
-            print('.')
-        if(i % 300 == 0) : 
-            newGen = (p.evaluate()[0].fitness,p.evaluate()[0].fitness+ 10000)
-            print('Best distance: ', newGen[1])
-        p.next_gen(3)
-        i+=1
+        try:
+            if i % 50 == 0 :
+                print('.')
+            if(i % 300 == 0) : 
+                newGen = (p.evaluate()[0].fitness,p.evaluate()[0].fitness+ 10000)
+                print('Best distance: ', newGen[1])
+                print('Progress: ',round(i/max_gen*100,2),'%')
+            p.next_gen(3)
+            i+=1
+        except Exception as e:
+            print(e)
     newGen = (p.evaluate()[0].fitness,p.evaluate()[0].fitness+ 10000)  
     print('Best distance: ', newGen[1])
     best_genoT = p.evaluate()[-1].genotype

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3d711f1aa0cd4a23a807927a7c1b7a24 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_3d711f1aa0cd4a23a807927a7c1b7a24" ></div>
+        
+</body>
+<script>    
+    
+            var map_3d711f1aa0cd4a23a807927a7c1b7a24 = L.map(
+                "map_3d711f1aa0cd4a23a807927a7c1b7a24",
+                {
+                    center: [23.0676883, -104.7929726],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_797629488cfa45fcb5c6e2156cab4f70 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+            var marker_de5707d4af4b4232a016147af02a2f1f = L.marker(
+                [25.42321, -101.0053],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+            var icon_a24eacce739c4b49b0a2ac52046206e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_de5707d4af4b4232a016147af02a2f1f.setIcon(icon_a24eacce739c4b49b0a2ac52046206e7);
+        
+    
+        var popup_56666c63f1004e2f8dea8c93b92c595b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3304c9e18fb6467f83a9e2d027fd862d = $(`<div id="html_3304c9e18fb6467f83a9e2d027fd862d" style="width: 100.0%; height: 100.0%;"><b>Saltillo</b></div>`)[0];
+            popup_56666c63f1004e2f8dea8c93b92c595b.setContent(html_3304c9e18fb6467f83a9e2d027fd862d);
+        
+
+        marker_de5707d4af4b4232a016147af02a2f1f.bindPopup(popup_56666c63f1004e2f8dea8c93b92c595b)
+        ;
+
+        
+    
+    
+            marker_de5707d4af4b4232a016147af02a2f1f.bindTooltip(
+                `<div>
+                     1 => Saltillo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0bdc0004d73544b1996a026acbbef093 = L.marker(
+                [25.67507, -100.31847],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_a022453d6696419d905fb1402977a946 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_62369cc5bcf6433699a9b041fa7d2987 = $(`<div id="html_62369cc5bcf6433699a9b041fa7d2987" style="width: 100.0%; height: 100.0%;"><b>Monterrey</b></div>`)[0];
+            popup_a022453d6696419d905fb1402977a946.setContent(html_62369cc5bcf6433699a9b041fa7d2987);
+        
+
+        marker_0bdc0004d73544b1996a026acbbef093.bindPopup(popup_a022453d6696419d905fb1402977a946)
+        ;
+
+        
+    
+    
+            marker_0bdc0004d73544b1996a026acbbef093.bindTooltip(
+                `<div>
+                     2 => Monterrey
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e858e5f15d6f4db1a6603ab012eb8a69 = L.marker(
+                [23.740981, -99.213379],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_d4ac0dd3b52a48408563930481abb382 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2af00349c4a4ddab1b442c0235ff68b = $(`<div id="html_a2af00349c4a4ddab1b442c0235ff68b" style="width: 100.0%; height: 100.0%;"><b>Ciudad Victoria</b></div>`)[0];
+            popup_d4ac0dd3b52a48408563930481abb382.setContent(html_a2af00349c4a4ddab1b442c0235ff68b);
+        
+
+        marker_e858e5f15d6f4db1a6603ab012eb8a69.bindPopup(popup_d4ac0dd3b52a48408563930481abb382)
+        ;
+
+        
+    
+    
+            marker_e858e5f15d6f4db1a6603ab012eb8a69.bindTooltip(
+                `<div>
+                     3 => Ciudad Victoria
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b3ae1206d2744bb9ae2af247a933e005 = L.marker(
+                [22.14982, -100.97916],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_2189953e6d4b4fb3862d9456dc6f6871 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ee334cba34d4399b113b68c7d7b9968 = $(`<div id="html_3ee334cba34d4399b113b68c7d7b9968" style="width: 100.0%; height: 100.0%;"><b>San Luis</b></div>`)[0];
+            popup_2189953e6d4b4fb3862d9456dc6f6871.setContent(html_3ee334cba34d4399b113b68c7d7b9968);
+        
+
+        marker_b3ae1206d2744bb9ae2af247a933e005.bindPopup(popup_2189953e6d4b4fb3862d9456dc6f6871)
+        ;
+
+        
+    
+    
+            marker_b3ae1206d2744bb9ae2af247a933e005.bindTooltip(
+                `<div>
+                     4 => San Luis
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f4f06fc34c16485a9036cd486892a411 = L.marker(
+                [21.025104, -101.2929],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_8ef033a22a4d4e50903206387fbfcc99 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c2063a44883419d94d6b506712c1baf = $(`<div id="html_7c2063a44883419d94d6b506712c1baf" style="width: 100.0%; height: 100.0%;"><b>Guanajuato</b></div>`)[0];
+            popup_8ef033a22a4d4e50903206387fbfcc99.setContent(html_7c2063a44883419d94d6b506712c1baf);
+        
+
+        marker_f4f06fc34c16485a9036cd486892a411.bindPopup(popup_8ef033a22a4d4e50903206387fbfcc99)
+        ;
+
+        
+    
+    
+            marker_f4f06fc34c16485a9036cd486892a411.bindTooltip(
+                `<div>
+                     5 => Guanajuato
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b31b3dd6cf647fea1257fa053c3367b = L.marker(
+                [20.082506, -98.826819],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_0aa2f9c6c8d64fee85f03327cfb8b9c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fe7a3f4dca44f838d94b7deaee244fd = $(`<div id="html_8fe7a3f4dca44f838d94b7deaee244fd" style="width: 100.0%; height: 100.0%;"><b>Pachuca</b></div>`)[0];
+            popup_0aa2f9c6c8d64fee85f03327cfb8b9c4.setContent(html_8fe7a3f4dca44f838d94b7deaee244fd);
+        
+
+        marker_4b31b3dd6cf647fea1257fa053c3367b.bindPopup(popup_0aa2f9c6c8d64fee85f03327cfb8b9c4)
+        ;
+
+        
+    
+    
+            marker_4b31b3dd6cf647fea1257fa053c3367b.bindTooltip(
+                `<div>
+                     6 => Pachuca
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_232f148026244f9d8b6a49d1ec79726d = L.marker(
+                [19.42847, -99.12766],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_c5f8c656b0e0416aa8092bdaf38762a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_485f44efd0434555a26baf8757402c32 = $(`<div id="html_485f44efd0434555a26baf8757402c32" style="width: 100.0%; height: 100.0%;"><b>Ciudad de México</b></div>`)[0];
+            popup_c5f8c656b0e0416aa8092bdaf38762a4.setContent(html_485f44efd0434555a26baf8757402c32);
+        
+
+        marker_232f148026244f9d8b6a49d1ec79726d.bindPopup(popup_c5f8c656b0e0416aa8092bdaf38762a4)
+        ;
+
+        
+    
+    
+            marker_232f148026244f9d8b6a49d1ec79726d.bindTooltip(
+                `<div>
+                     7 => Ciudad de México
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b83fbfca7ed4a72b817f59c85544e16 = L.marker(
+                [19.416135, -98.727453],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_312b7ca8c21f4c8d91ae141aaa17b262 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d90c60837f014f339a2a91a3cedd8eff = $(`<div id="html_d90c60837f014f339a2a91a3cedd8eff" style="width: 100.0%; height: 100.0%;"><b>Tlaxcala</b></div>`)[0];
+            popup_312b7ca8c21f4c8d91ae141aaa17b262.setContent(html_d90c60837f014f339a2a91a3cedd8eff);
+        
+
+        marker_3b83fbfca7ed4a72b817f59c85544e16.bindPopup(popup_312b7ca8c21f4c8d91ae141aaa17b262)
+        ;
+
+        
+    
+    
+            marker_3b83fbfca7ed4a72b817f59c85544e16.bindTooltip(
+                `<div>
+                     8 => Tlaxcala
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5fbf020160ca4c0a98ff160c877492a0 = L.marker(
+                [19.03793, -98.20346],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_eba4d96c00d745e6baeb82b2d4c1a1f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ad3d5809dc54829b009f89a81f0a4ab = $(`<div id="html_1ad3d5809dc54829b009f89a81f0a4ab" style="width: 100.0%; height: 100.0%;"><b>Puebla</b></div>`)[0];
+            popup_eba4d96c00d745e6baeb82b2d4c1a1f5.setContent(html_1ad3d5809dc54829b009f89a81f0a4ab);
+        
+
+        marker_5fbf020160ca4c0a98ff160c877492a0.bindPopup(popup_eba4d96c00d745e6baeb82b2d4c1a1f5)
+        ;
+
+        
+    
+    
+            marker_5fbf020160ca4c0a98ff160c877492a0.bindTooltip(
+                `<div>
+                     9 => Puebla
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16033585f03945d9b4e86c2b615fcc5a = L.marker(
+                [19.542036, -96.954949],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_ca6313755a084179afe304c3d1659e22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d697e4db53948f0a2d99ebbf5d84b82 = $(`<div id="html_4d697e4db53948f0a2d99ebbf5d84b82" style="width: 100.0%; height: 100.0%;"><b>Xalapa</b></div>`)[0];
+            popup_ca6313755a084179afe304c3d1659e22.setContent(html_4d697e4db53948f0a2d99ebbf5d84b82);
+        
+
+        marker_16033585f03945d9b4e86c2b615fcc5a.bindPopup(popup_ca6313755a084179afe304c3d1659e22)
+        ;
+
+        
+    
+    
+            marker_16033585f03945d9b4e86c2b615fcc5a.bindTooltip(
+                `<div>
+                     10 => Xalapa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d97bec3e7a474401981c7b8446eea847 = L.marker(
+                [20.97537, -89.61696],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_1f2cfb92f5b0436e96572dbcd570260e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_99e4f4a08b0f42eaa081fd7bba6a8e9e = $(`<div id="html_99e4f4a08b0f42eaa081fd7bba6a8e9e" style="width: 100.0%; height: 100.0%;"><b>Mérida</b></div>`)[0];
+            popup_1f2cfb92f5b0436e96572dbcd570260e.setContent(html_99e4f4a08b0f42eaa081fd7bba6a8e9e);
+        
+
+        marker_d97bec3e7a474401981c7b8446eea847.bindPopup(popup_1f2cfb92f5b0436e96572dbcd570260e)
+        ;
+
+        
+    
+    
+            marker_d97bec3e7a474401981c7b8446eea847.bindTooltip(
+                `<div>
+                     11 => Mérida
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_713e18da82174e48b8b925247d8db408 = L.marker(
+                [18.522157, -88.339799],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_691f5180ae5040949972e7e4bc658f34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cdebcd189bfe4dc28ca1899a6a9c6668 = $(`<div id="html_cdebcd189bfe4dc28ca1899a6a9c6668" style="width: 100.0%; height: 100.0%;"><b>Chetumal</b></div>`)[0];
+            popup_691f5180ae5040949972e7e4bc658f34.setContent(html_cdebcd189bfe4dc28ca1899a6a9c6668);
+        
+
+        marker_713e18da82174e48b8b925247d8db408.bindPopup(popup_691f5180ae5040949972e7e4bc658f34)
+        ;
+
+        
+    
+    
+            marker_713e18da82174e48b8b925247d8db408.bindTooltip(
+                `<div>
+                     12 => Chetumal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_73ef968be6dc4065bc8f03abc500358e = L.marker(
+                [19.830558, -90.614858],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_d6fe3f169d1946fbaae4bb0b1406286d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f9d6dd53f5c4989b5d89292cc9f4c37 = $(`<div id="html_9f9d6dd53f5c4989b5d89292cc9f4c37" style="width: 100.0%; height: 100.0%;"><b>Campeche</b></div>`)[0];
+            popup_d6fe3f169d1946fbaae4bb0b1406286d.setContent(html_9f9d6dd53f5c4989b5d89292cc9f4c37);
+        
+
+        marker_73ef968be6dc4065bc8f03abc500358e.bindPopup(popup_d6fe3f169d1946fbaae4bb0b1406286d)
+        ;
+
+        
+    
+    
+            marker_73ef968be6dc4065bc8f03abc500358e.bindTooltip(
+                `<div>
+                     13 => Campeche
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_89e9776ccc584c4ea63e0c840831be67 = L.marker(
+                [17.992517, -93.023162],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_6344a31cd7f24c19b00b18de8d3c61f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cebe5421f5404378bfdd8a0c89955c59 = $(`<div id="html_cebe5421f5404378bfdd8a0c89955c59" style="width: 100.0%; height: 100.0%;"><b>Villahermosa</b></div>`)[0];
+            popup_6344a31cd7f24c19b00b18de8d3c61f7.setContent(html_cebe5421f5404378bfdd8a0c89955c59);
+        
+
+        marker_89e9776ccc584c4ea63e0c840831be67.bindPopup(popup_6344a31cd7f24c19b00b18de8d3c61f7)
+        ;
+
+        
+    
+    
+            marker_89e9776ccc584c4ea63e0c840831be67.bindTooltip(
+                `<div>
+                     14 => Villahermosa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_efe0840b09db41a8b715ceae434499a1 = L.marker(
+                [16.745986, -93.199611],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_d74b33a7fc4642eaa5f5ba179a135ef4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_31a3dfa3f29542458158555b83fe2bb1 = $(`<div id="html_31a3dfa3f29542458158555b83fe2bb1" style="width: 100.0%; height: 100.0%;"><b>Tuxtla Gutiérrez</b></div>`)[0];
+            popup_d74b33a7fc4642eaa5f5ba179a135ef4.setContent(html_31a3dfa3f29542458158555b83fe2bb1);
+        
+
+        marker_efe0840b09db41a8b715ceae434499a1.bindPopup(popup_d74b33a7fc4642eaa5f5ba179a135ef4)
+        ;
+
+        
+    
+    
+            marker_efe0840b09db41a8b715ceae434499a1.bindTooltip(
+                `<div>
+                     15 => Tuxtla Gutiérrez
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dd0fbeacc62e484d82c281f164dd7b71 = L.marker(
+                [17.081286, -96.805773],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_61e518e9f71e419bb9dbc470a4ac310e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca252879310140f5bbb20a13068d0798 = $(`<div id="html_ca252879310140f5bbb20a13068d0798" style="width: 100.0%; height: 100.0%;"><b>Oaxaca</b></div>`)[0];
+            popup_61e518e9f71e419bb9dbc470a4ac310e.setContent(html_ca252879310140f5bbb20a13068d0798);
+        
+
+        marker_dd0fbeacc62e484d82c281f164dd7b71.bindPopup(popup_61e518e9f71e419bb9dbc470a4ac310e)
+        ;
+
+        
+    
+    
+            marker_dd0fbeacc62e484d82c281f164dd7b71.bindTooltip(
+                `<div>
+                     16 => Oaxaca
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27b12a95846946cbb961fc0f6f98c3de = L.marker(
+                [17.547698, -99.567457],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_1af31cabf5af44cda36b47ac54a0d5cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_215539cd60494459b8e9518e00f3b357 = $(`<div id="html_215539cd60494459b8e9518e00f3b357" style="width: 100.0%; height: 100.0%;"><b>Chilpancingo</b></div>`)[0];
+            popup_1af31cabf5af44cda36b47ac54a0d5cd.setContent(html_215539cd60494459b8e9518e00f3b357);
+        
+
+        marker_27b12a95846946cbb961fc0f6f98c3de.bindPopup(popup_1af31cabf5af44cda36b47ac54a0d5cd)
+        ;
+
+        
+    
+    
+            marker_27b12a95846946cbb961fc0f6f98c3de.bindTooltip(
+                `<div>
+                     17 => Chilpancingo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6946a74f84ac42b18c0b04d73e58b071 = L.marker(
+                [18.931869, -99.310606],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_f3102370d35a4ea6ac971bf6750d9979 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ac43f17c27d47d39619ba674ae87c87 = $(`<div id="html_6ac43f17c27d47d39619ba674ae87c87" style="width: 100.0%; height: 100.0%;"><b>Cuernavaca</b></div>`)[0];
+            popup_f3102370d35a4ea6ac971bf6750d9979.setContent(html_6ac43f17c27d47d39619ba674ae87c87);
+        
+
+        marker_6946a74f84ac42b18c0b04d73e58b071.bindPopup(popup_f3102370d35a4ea6ac971bf6750d9979)
+        ;
+
+        
+    
+    
+            marker_6946a74f84ac42b18c0b04d73e58b071.bindTooltip(
+                `<div>
+                     18 => Cuernavaca
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0deb684e1cc942f8b704df5372d16628 = L.marker(
+                [19.294099, -99.701255],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_8c06905e433545f19ff3c2160d40f45b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c88497ce4761455e8b166ee5ceeee2ce = $(`<div id="html_c88497ce4761455e8b166ee5ceeee2ce" style="width: 100.0%; height: 100.0%;"><b>Toluca</b></div>`)[0];
+            popup_8c06905e433545f19ff3c2160d40f45b.setContent(html_c88497ce4761455e8b166ee5ceeee2ce);
+        
+
+        marker_0deb684e1cc942f8b704df5372d16628.bindPopup(popup_8c06905e433545f19ff3c2160d40f45b)
+        ;
+
+        
+    
+    
+            marker_0deb684e1cc942f8b704df5372d16628.bindTooltip(
+                `<div>
+                     19 => Toluca
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_83bb362abd084c26acdea7f626428ee6 = L.marker(
+                [20.612123, -100.480258],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_d3b8752649d04b51ae556836ef613df4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_726664685ef548c4b827bac587021e00 = $(`<div id="html_726664685ef548c4b827bac587021e00" style="width: 100.0%; height: 100.0%;"><b>Querétaro</b></div>`)[0];
+            popup_d3b8752649d04b51ae556836ef613df4.setContent(html_726664685ef548c4b827bac587021e00);
+        
+
+        marker_83bb362abd084c26acdea7f626428ee6.bindPopup(popup_d3b8752649d04b51ae556836ef613df4)
+        ;
+
+        
+    
+    
+            marker_83bb362abd084c26acdea7f626428ee6.bindTooltip(
+                `<div>
+                     20 => Querétaro
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4ffae957ba5f4105b575efd9f386d855 = L.marker(
+                [19.70078, -101.18443],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_32e3d0125a9042f686998119aba289f1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7fd112ea913b4467b231a2bf8e090269 = $(`<div id="html_7fd112ea913b4467b231a2bf8e090269" style="width: 100.0%; height: 100.0%;"><b>Morelia</b></div>`)[0];
+            popup_32e3d0125a9042f686998119aba289f1.setContent(html_7fd112ea913b4467b231a2bf8e090269);
+        
+
+        marker_4ffae957ba5f4105b575efd9f386d855.bindPopup(popup_32e3d0125a9042f686998119aba289f1)
+        ;
+
+        
+    
+    
+            marker_4ffae957ba5f4105b575efd9f386d855.bindTooltip(
+                `<div>
+                     21 => Morelia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4e0789cd2a304c57b1602da048daef6f = L.marker(
+                [19.240044, -103.763627],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_148a968ccf1947018d4d9c032e562912 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_764551976bd94097ae67497e38a4da07 = $(`<div id="html_764551976bd94097ae67497e38a4da07" style="width: 100.0%; height: 100.0%;"><b>Colima</b></div>`)[0];
+            popup_148a968ccf1947018d4d9c032e562912.setContent(html_764551976bd94097ae67497e38a4da07);
+        
+
+        marker_4e0789cd2a304c57b1602da048daef6f.bindPopup(popup_148a968ccf1947018d4d9c032e562912)
+        ;
+
+        
+    
+    
+            marker_4e0789cd2a304c57b1602da048daef6f.bindTooltip(
+                `<div>
+                     22 => Colima
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_db567f9fd0ed4d64abd739cfbee465ca = L.marker(
+                [20.66682, -103.39182],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_a48b0f2ed7cc435c940f38fd9573b0ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bb9fb65eed6c4c0da5d5f98cfd2dd77c = $(`<div id="html_bb9fb65eed6c4c0da5d5f98cfd2dd77c" style="width: 100.0%; height: 100.0%;"><b>Guadalajara</b></div>`)[0];
+            popup_a48b0f2ed7cc435c940f38fd9573b0ab.setContent(html_bb9fb65eed6c4c0da5d5f98cfd2dd77c);
+        
+
+        marker_db567f9fd0ed4d64abd739cfbee465ca.bindPopup(popup_a48b0f2ed7cc435c940f38fd9573b0ab)
+        ;
+
+        
+    
+    
+            marker_db567f9fd0ed4d64abd739cfbee465ca.bindTooltip(
+                `<div>
+                     23 => Guadalajara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c3775d2d32644519c8992060686ae56 = L.marker(
+                [21.88572, -102.361341],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_b97fd1466f774e63aa9503510568bdb5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0fbd1c6c9df4c17975cc4ac2aa14e6e = $(`<div id="html_c0fbd1c6c9df4c17975cc4ac2aa14e6e" style="width: 100.0%; height: 100.0%;"><b>Aguascalientes</b></div>`)[0];
+            popup_b97fd1466f774e63aa9503510568bdb5.setContent(html_c0fbd1c6c9df4c17975cc4ac2aa14e6e);
+        
+
+        marker_4c3775d2d32644519c8992060686ae56.bindPopup(popup_b97fd1466f774e63aa9503510568bdb5)
+        ;
+
+        
+    
+    
+            marker_4c3775d2d32644519c8992060686ae56.bindTooltip(
+                `<div>
+                     24 => Aguascalientes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d3ef1abecf8c49808d84b86b9bcc6c17 = L.marker(
+                [21.500971, -104.946946],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_8d45cc623a354f28a8273deded2b2f85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d061460e12a4272a75e28cbe275396f = $(`<div id="html_6d061460e12a4272a75e28cbe275396f" style="width: 100.0%; height: 100.0%;"><b>Tepic</b></div>`)[0];
+            popup_8d45cc623a354f28a8273deded2b2f85.setContent(html_6d061460e12a4272a75e28cbe275396f);
+        
+
+        marker_d3ef1abecf8c49808d84b86b9bcc6c17.bindPopup(popup_8d45cc623a354f28a8273deded2b2f85)
+        ;
+
+        
+    
+    
+            marker_d3ef1abecf8c49808d84b86b9bcc6c17.bindTooltip(
+                `<div>
+                     25 => Tepic
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7989b287758b402c9096aa5e3ee757b5 = L.marker(
+                [23.067688, -104.792973],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_b5b66de558d54215aaeaa393197e9abc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7748c959a99445d3b6899319ab312cbf = $(`<div id="html_7748c959a99445d3b6899319ab312cbf" style="width: 100.0%; height: 100.0%;"><b>Zacatecas</b></div>`)[0];
+            popup_b5b66de558d54215aaeaa393197e9abc.setContent(html_7748c959a99445d3b6899319ab312cbf);
+        
+
+        marker_7989b287758b402c9096aa5e3ee757b5.bindPopup(popup_b5b66de558d54215aaeaa393197e9abc)
+        ;
+
+        
+    
+    
+            marker_7989b287758b402c9096aa5e3ee757b5.bindTooltip(
+                `<div>
+                     26 => Zacatecas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7a77d90373e64b059677c37ee334a6b4 = L.marker(
+                [24.578335, -107.086384],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_28225707684d40de8f2d0f0da6ffbbb4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c3cf01ed30d4945bc70b1749c20cbbf = $(`<div id="html_1c3cf01ed30d4945bc70b1749c20cbbf" style="width: 100.0%; height: 100.0%;"><b>Durango</b></div>`)[0];
+            popup_28225707684d40de8f2d0f0da6ffbbb4.setContent(html_1c3cf01ed30d4945bc70b1749c20cbbf);
+        
+
+        marker_7a77d90373e64b059677c37ee334a6b4.bindPopup(popup_28225707684d40de8f2d0f0da6ffbbb4)
+        ;
+
+        
+    
+    
+            marker_7a77d90373e64b059677c37ee334a6b4.bindTooltip(
+                `<div>
+                     27 => Durango
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f393042acd0942929bf57d12ed76b64e = L.marker(
+                [24.804901, -107.493355],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_126d92fd4a9d4271a214174d107c42b5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c50e9e5f0a6b49b59e0906241a628927 = $(`<div id="html_c50e9e5f0a6b49b59e0906241a628927" style="width: 100.0%; height: 100.0%;"><b>Culicán</b></div>`)[0];
+            popup_126d92fd4a9d4271a214174d107c42b5.setContent(html_c50e9e5f0a6b49b59e0906241a628927);
+        
+
+        marker_f393042acd0942929bf57d12ed76b64e.bindPopup(popup_126d92fd4a9d4271a214174d107c42b5)
+        ;
+
+        
+    
+    
+            marker_f393042acd0942929bf57d12ed76b64e.bindTooltip(
+                `<div>
+                     28 => Culicán
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bad3819ed4b44db8b0f512852a4dc20d = L.marker(
+                [24.116421, -110.372768],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_d85f8ccc92c34cfb9cf816aaeac7426c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_601c904085274debb0ec8dc2e9d280e9 = $(`<div id="html_601c904085274debb0ec8dc2e9d280e9" style="width: 100.0%; height: 100.0%;"><b>La Paz</b></div>`)[0];
+            popup_d85f8ccc92c34cfb9cf816aaeac7426c.setContent(html_601c904085274debb0ec8dc2e9d280e9);
+        
+
+        marker_bad3819ed4b44db8b0f512852a4dc20d.bindPopup(popup_d85f8ccc92c34cfb9cf816aaeac7426c)
+        ;
+
+        
+    
+    
+            marker_bad3819ed4b44db8b0f512852a4dc20d.bindTooltip(
+                `<div>
+                     29 => La Paz
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_934153b6ae9d4715b597b6c4c26ab4c7 = L.marker(
+                [28.63528, -106.08889],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_3c94a213873b4f589103127ff1fac4d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83d37a24710d49d1af6f85a0ae0a182d = $(`<div id="html_83d37a24710d49d1af6f85a0ae0a182d" style="width: 100.0%; height: 100.0%;"><b>Chihuahua</b></div>`)[0];
+            popup_3c94a213873b4f589103127ff1fac4d8.setContent(html_83d37a24710d49d1af6f85a0ae0a182d);
+        
+
+        marker_934153b6ae9d4715b597b6c4c26ab4c7.bindPopup(popup_3c94a213873b4f589103127ff1fac4d8)
+        ;
+
+        
+    
+    
+            marker_934153b6ae9d4715b597b6c4c26ab4c7.bindTooltip(
+                `<div>
+                     30 => Chihuahua
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2ad9b1ef27cb40daa4f734febd8023fa = L.marker(
+                [29.1026, -110.97732],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+        var popup_4a8502e33c8e4420a01baac5d0995948 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a4f637b90f744d99d79e372297088a5 = $(`<div id="html_7a4f637b90f744d99d79e372297088a5" style="width: 100.0%; height: 100.0%;"><b>Hermosillo</b></div>`)[0];
+            popup_4a8502e33c8e4420a01baac5d0995948.setContent(html_7a4f637b90f744d99d79e372297088a5);
+        
+
+        marker_2ad9b1ef27cb40daa4f734febd8023fa.bindPopup(popup_4a8502e33c8e4420a01baac5d0995948)
+        ;
+
+        
+    
+    
+            marker_2ad9b1ef27cb40daa4f734febd8023fa.bindTooltip(
+                `<div>
+                     31 => Hermosillo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a7aac3813c54fab9a395cd269ec9869 = L.marker(
+                [32.62781, -115.45446],
+                {}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+    
+            var icon_8978ba28c7c548d39dcde3968020c651 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5a7aac3813c54fab9a395cd269ec9869.setIcon(icon_8978ba28c7c548d39dcde3968020c651);
+        
+    
+        var popup_8d0c2f8afbe3469bb238853f290ade85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d810949bec2d441bb837439fc28ff02f = $(`<div id="html_d810949bec2d441bb837439fc28ff02f" style="width: 100.0%; height: 100.0%;"><b>Mexicali</b></div>`)[0];
+            popup_8d0c2f8afbe3469bb238853f290ade85.setContent(html_d810949bec2d441bb837439fc28ff02f);
+        
+
+        marker_5a7aac3813c54fab9a395cd269ec9869.bindPopup(popup_8d0c2f8afbe3469bb238853f290ade85)
+        ;
+
+        
+    
+    
+            marker_5a7aac3813c54fab9a395cd269ec9869.bindTooltip(
+                `<div>
+                     32 => Mexicali
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_561ca9adca434f8d8bf24b3d81066d31 = L.polyline(
+                [[25.42321, -101.0053], [25.67507, -100.31847], [23.740981, -99.213379], [22.14982, -100.97916], [21.025104, -101.2929], [20.082506, -98.826819], [19.42847, -99.12766], [19.416135, -98.727453], [19.03793, -98.20346], [19.542036, -96.954949], [20.97537, -89.61696], [18.522157, -88.339799], [19.830558, -90.614858], [17.992517, -93.023162], [16.745986, -93.199611], [17.081286, -96.805773], [17.547698, -99.567457], [18.931869, -99.310606], [19.294099, -99.701255], [20.612123, -100.480258], [19.70078, -101.18443], [19.240044, -103.763627], [20.66682, -103.39182], [21.88572, -102.361341], [21.500971, -104.946946], [23.067688, -104.792973], [24.578335, -107.086384], [24.804901, -107.493355], [24.116421, -110.372768], [28.63528, -106.08889], [29.1026, -110.97732], [32.62781, -115.45446]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_3d711f1aa0cd4a23a807927a7c1b7a24);
+        
+</script>
